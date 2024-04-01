@@ -1,8 +1,6 @@
 const HttpControllers = require('../controllers/http');
 const PostControllers = require('../controllers/posts');
 
-
-
 const routes = async (req, res) => {
 
     //解構減少重複
