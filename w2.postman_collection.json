@@ -10,7 +10,19 @@
 			"name": "getPosts",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://two024nodew2.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"two024nodew2",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
 			},
 			"response": []
 		},
@@ -29,18 +41,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:3005/posts/",
-					"protocol": "http",
+					"raw": "https://two024nodew2.onrender.com/posts",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"two024nodew2",
+						"onrender",
+						"com"
 					],
-					"port": "3005",
 					"path": [
-						"posts",
-						""
+						"posts"
 					]
 				}
 			},
@@ -61,15 +70,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:3005/posts/",
-					"protocol": "http",
+					"raw": "https://two024nodew2.onrender.com/posts/",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"two024nodew2",
+						"onrender",
+						"com"
 					],
-					"port": "3005",
 					"path": [
 						"posts",
 						""
@@ -84,15 +91,13 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:3005/posts",
-					"protocol": "http",
+					"raw": "https://two024nodew2.onrender.com/posts",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"two024nodew2",
+						"onrender",
+						"com"
 					],
-					"port": "3005",
 					"path": [
 						"posts"
 					]
@@ -106,15 +111,13 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:3005/posts/",
-					"protocol": "http",
+					"raw": "https://two024nodew2.onrender.com/posts/",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"two024nodew2",
+						"onrender",
+						"com"
 					],
-					"port": "3005",
 					"path": [
 						"posts",
 						""
