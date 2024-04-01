@@ -1,4 +1,3 @@
-require('./connections');
 const routes = require('./routes')
 
 //重新命名
