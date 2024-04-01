@@ -1,7 +1,5 @@
 //將連結的部分獨立
 const mongoose = require('mongoose');
-require('dotenv').config();
-
 const DB = process.env.DATABASE.replace(
     '<password>',
     process.env.DATABASE_PASSWORD
