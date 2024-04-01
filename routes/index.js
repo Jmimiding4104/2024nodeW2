@@ -17,7 +17,7 @@ const routes = async (req, res) => {
     if (url == '/posts' && method == 'GET') {
         PostControllers.getPosts({req, res});
     } else if (method == 'OPTIONS') {
-        HttpControllers.cors(req,res)
+        HttpControllers.cors({req, res})
     } else if (url == '/posts' && method == 'POST') {
         //資料確認都處理完成再繼續
         req.on('end', () => {
@@ -33,7 +33,7 @@ const routes = async (req, res) => {
     } else if (url.startsWith('/posts/') && method == 'DELETE') {
         PostControllers.deletePost({req, res});
     } else {
-        HttpControllers.notFound(req,res)
+        HttpControllers.notFound({req, res})
     }
 }
 
