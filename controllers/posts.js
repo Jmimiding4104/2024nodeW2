@@ -4,7 +4,7 @@ const successHandle = require('../service/succesHandle');
 const Post = require('../models/postSchema');
 
 const posts = {
-    async getPosts({req, res}) {
+    async getPosts({ req, res }) {
         const post = await Post.find();
         successHandle(res, post);
     },
@@ -40,9 +40,12 @@ const posts = {
                     type: data.type
                 };
                 //更新後最新的 DATA
-                const editPost = await Post.findByIdAndUpdate(id, editContent,{ new: true });
-                console.log(editPost)
-                successHandle(res, editPost);
+                const editPost = await Post.findByIdAndUpdate(id, editContent, { new: true });
+                if (editPost != null) {
+                    successHandle(res, editPost);
+                } else {
+                    errHandle(res);
+                }
             } else {
                 errHandle(res);
             }
@@ -50,15 +53,15 @@ const posts = {
             errHandle(res);
         };
     },
-    async deletePosts({req, res}){
+    async deletePosts({ req, res }) {
         await Post.deleteMany({});
-        await this.getPosts({req, res})
+        await this.getPosts({ req, res })
     },
-    async deletePost({req, res}){
+    async deletePost({ req, res }) {
         try {
             const id = req.url.split('/').pop();
             await Post.findByIdAndDelete(id);
-            await this.getPosts({req, res})
+            await this.getPosts({ req, res })
         } catch (err) {
             errHandle(res);
         }
